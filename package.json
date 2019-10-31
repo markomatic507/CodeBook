@@ -1,0 +1,33 @@
+{
+    "name": "codebook",
+    "version": "1.0.0",
+    "description": "Social network",
+    "main": "server.js",
+    "scripts": {
+        "start-node": "node server.js",
+        "server-node": "nodemon server.js",
+        "front-install": "npm install --prefix client",
+        "start-front": "npm start --prefix client",
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "install": "concurrently \"npm install --prefix client\" \"npm install\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "author": "Marko Matic",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "gravatar": "^1.8.0",
+        "jsonwebtoken": "^8.5.0",
+        "jwt-decode": "^2.2.0",
+        "mongoose": "^5.4.19",
+        "passport": "^0.4.0",
+        "passport-jwt": "^4.0.0",
+        "prop-types": "^15.7.2",
+        "validator": "^10.11.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.10"
+    }
+}
